@@ -7,5 +7,7 @@ class Snack(models.Model):
     purchaser = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     description = models.TextField()
 
+    objects = models.Manager()
+
     def __str__(self):
         return self.name
